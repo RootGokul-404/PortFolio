@@ -1,0 +1,26 @@
+# Build Tasks
+
+- [x] Upgrade the portfolio from static delivery to a persistent database-backed application.
+- [x] Define database tables for projects, skills, technical articles, and contact submissions.
+- [x] Connect the portfolio sections and contact form to persistent data.
+- [x] Verify database-backed read flow, contact-submission contract, type safety, production build, and persisted catalogue before delivery.
+- [x] Update the persistent profile with RootGokul-404 identity, GitHub, social links, and Java full-stack positioning.
+- [x] Add the supplied profile photograph to the hero and portfolio identity system.
+- [x] Refresh the technical skills and writing details using the supplied developer profile.
+- [x] Verify the updated desktop and mobile portfolio experience, test suite, type safety, and production build.
+- [x] Persist the supplied RootGokul-404 tagline, mission, journey, focus stack, and future targets.
+- [x] Add a concise EEE-to-IT pipeline section and engineering mindset to the portfolio experience.
+- [x] Refine hero and contact copy with the supplied developer voice and connection details.
+- [x] Verify the narrative update across desktop and mobile layouts, tests, type safety, and production build.
+- [x] Restore the development server after the reported interruption and confirm the portfolio responds.
+- [x] Configure the contact form to notify gokulakannan7972@gmail.com of new persisted messages.
+- [x] Verify contact-submission persistence and notification behavior without exposing sender data, including one user-confirmed labelled smoke test with emailSent=true.
+- [x] Apply the user-provided Resend credential securely and validate a send-permission-safe contact notification path.
+- [x] Add an owner-restricted admin dashboard to view and manage all contact submissions.
+- [x] Add an owner-restricted portfolio content-management page for profile, projects, skills, articles, and profile details.
+- [x] Add contact-form honeypot protection, loading feedback, and clear success messaging.
+- [x] Create and validate a reusable skill for this database-backed portfolio workflow.
+- [x] Verify authenticated positive admin reads and unchanged-content save/status writes through the protected router.
+- [x] Restore the development server after the interrupted admin-route integration.
+- [x] Add a public Admin login button that securely launches owner sign-in and routes to the admin panel.
+- [x] Verify the public login entry, OAuth state return path, type safety, production build, and navigation rendering.
