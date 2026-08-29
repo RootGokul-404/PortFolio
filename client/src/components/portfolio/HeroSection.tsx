@@ -68,10 +68,10 @@ export function HeroSection({ profile, onOpenResume }: HeroSectionProps) {
 
               <button
                 onClick={onOpenResume}
-                className="group flex items-center gap-2 rounded-sm border border-white/15 bg-white/[0.03] px-5 py-3 font-mono text-xs font-medium text-white transition-all hover:border-white/30 hover:bg-white/[0.08]"
+                className="group flex items-center gap-2 rounded-sm border border-white/15 bg-white/[0.03] px-5 py-3 font-mono text-xs font-medium text-white transition-all hover:border-[#c7ff40]/50 hover:bg-white/[0.08]"
               >
                 <FileDown className="h-4 w-4 text-[#c7ff40]" />
-                <span>RÉSUMÉ SPEC</span>
+                <span>DOWNLOAD RÉSUMÉ</span>
               </button>
 
               <div className="flex items-center gap-2 border-l border-white/10 pl-3">

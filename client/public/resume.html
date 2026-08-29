@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gokulakannan M — Resume</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+      color: #1e293b;
+      background: #f8fafc;
+      padding: 40px 20px;
+    }
+    .resume-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 48px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    }
+    .header {
+      border-bottom: 2px solid #0284c7;
+      padding-bottom: 16px;
+      margin-bottom: 24px;
+    }
+    .header h1 {
+      font-size: 28px;
+      color: #0f172a;
+      letter-spacing: -0.5px;
+    }
+    .header .subtitle {
+      font-size: 16px;
+      color: #0284c7;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+    .header .contact-info {
+      margin-top: 8px;
+      font-size: 13px;
+      color: #64748b;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .header .contact-info a {
+      color: #0284c7;
+      text-decoration: none;
+    }
+    .section {
+      margin-bottom: 22px;
+    }
+    .section-title {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #0f172a;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 4px;
+      margin-bottom: 12px;
+    }
+    .summary-text {
+      font-size: 13.5px;
+      color: #334155;
+      line-height: 1.6;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px 16px;
+      font-size: 13.5px;
+    }
+    .skill-item strong {
+      color: #0f172a;
+    }
+    .project-item {
+      margin-bottom: 14px;
+    }
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .project-title {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .project-category {
+      font-size: 12px;
+      color: #64748b;
+      font-style: italic;
+    }
+    .project-tech {
+      font-size: 12.5px;
+      color: #0284c7;
+      font-weight: 500;
+      margin-top: 2px;
+    }
+    .project-desc {
+      font-size: 13px;
+      color: #334155;
+      margin-top: 3px;
+      line-height: 1.5;
+    }
+    .education-item {
+      font-size: 13.5px;
+    }
+    .actions {
+      max-width: 800px;
+      margin: 0 auto 20px auto;
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+    }
+    .btn {
+      background: #0284c7;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+    }
+    .btn:hover {
+      background: #0369a1;
+    }
+    .btn-secondary {
+      background: #e2e8f0;
+      color: #334155;
+    }
+    .btn-secondary:hover {
+      background: #cbd5e1;
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+      .actions {
+        display: none !important;
+      }
+      .resume-container {
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="actions">
+    <button class="btn btn-secondary" onclick="window.history.back()">← Back to Portfolio</button>
+    <button class="btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+  </div>
+
+  <div class="resume-container">
+    <header class="header">
+      <h1>Gokulakannan M</h1>
+      <div class="subtitle">Java Full Stack Developer · Systems Builder</div>
+      <div class="contact-info">
+        <span>📧 <a href="mailto:gokulakannan7972@gmail.com">gokulakannan7972@gmail.com</a></span>
+        <span>📍 India</span>
+        <span>🔗 <a href="https://www.linkedin.com/in/gokula-kannan-dev" target="_blank">linkedin.com/in/gokula-kannan-dev</a></span>
+        <span>💻 <a href="https://github.com/RootGokul-404" target="_blank">github.com/RootGokul-404</a></span>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="section-title">Professional Summary</div>
+      <p class="summary-text">
+        Electrical and Electronics Engineering graduate transitioning into software engineering. Strong foundation in Java, Spring Boot, REST APIs, MySQL, and Data Structures & Algorithms. Passionate about designing robust backend architectures, clean modular code, and scalable full-stack applications.
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Technical Proficiencies</div>
+      <div class="skills-grid">
+        <div class="skill-item"><strong>Languages:</strong> Java, SQL, JavaScript, C, Python</div>
+        <div class="skill-item"><strong>Backend & APIs:</strong> Spring Boot, RESTful APIs, MySQL, JDBC</div>
+        <div class="skill-item"><strong>Frontend:</strong> HTML5, CSS3, JavaScript (ES6+), Bootstrap, React</div>
+        <div class="skill-item"><strong>Embedded Systems:</strong> ESP32, Embedded C, Microcontrollers, IoT</div>
+        <div class="skill-item"><strong>Developer Tools:</strong> Git, GitHub, Postman, Linux, Vite, VS Code</div>
+        <div class="skill-item"><strong>Core Concepts:</strong> OOP, DSA, System Design, Database Normalization</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Featured Engineering & Mini Projects</div>
+
+      <div class="project-item">
+        <div class="project-header">
+          <span class="project-title">IoT Integrated Farming System</span>
+          <span class="project-category">IoT Systems</span>
+        </div>
+        <div class="project-tech">Tech: ESP32, Embedded C, Soil Sensors, IoT Architecture</div>
+        <div class="project-desc">
+          Designed an automated agricultural telemetry system using ESP32 to monitor soil moisture, automate irrigation thresholds, and streamline farm operational data.
+        </div>
+      </div>
+
+      <div class="project-item">
+        <div class="project-header">
+          <span class="project-title">Automated Smart Parking System</span>
+          <span class="project-category">Automation & Systems</span>
+        </div>
+        <div class="project-tech">Tech: Java, Automation, System Design, SQL</div>
+        <div class="project-desc">
+          Engineered an intelligent parking management architecture implementing vehicle detection, real-time slot allocation, entry/exit logging, and billing records.
+        </div>
+      </div>
+
+      <div class="project-item">
+        <div class="project-header">
+          <span class="project-title">Taxi Booking System</span>
+          <span class="project-category">Application Development</span>
+        </div>
+        <div class="project-tech">Tech: Java, OOP Principles, SQL, Data Structures</div>
+        <div class="project-desc">
+          Created a modular booking application managing user ride requests, driver assignment algorithms, distance-based fare calculations, and booking logs.
+        </div>
+      </div>
+
+      <div class="project-item">
+        <div class="project-header">
+          <span class="project-title">ESP32 Smart Alarm Automation</span>
+          <span class="project-category">Embedded Systems / Mini Project</span>
+        </div>
+        <div class="project-tech">Tech: ESP32, Blynk IoT, Embedded C, Hardware Interfacing</div>
+        <div class="project-desc">
+          Developed an embedded alarm automation node using ESP32, PIR motion sensing, buzzer alert triggers, and mobile cloud notifications.
+        </div>
+      </div>
+
+      <div class="project-item">
+        <div class="project-header">
+          <span class="project-title">Java ATM & Banking Simulation</span>
+          <span class="project-category">Java Mini Project</span>
+        </div>
+        <div class="project-tech">Tech: Java, OOP, Exception Handling, File I/O</div>
+        <div class="project-desc">
+          Built a secure banking simulation featuring PIN authentication, deposit and withdrawal transactions, account balance auditing, and transaction ledger logging.
+        </div>
+      </div>
+
+      <div class="project-item">
+        <div class="project-header">
+          <span class="project-title">IoT Environmental Monitoring Node</span>
+          <span class="project-category">IoT Systems / Mini Project</span>
+        </div>
+        <div class="project-tech">Tech: ESP32, Embedded C, DHT11 Sensor, IoT Protocols</div>
+        <div class="project-desc">
+          Constructed a real-time microclimate monitoring node reading ambient temperature and humidity data with automated cloud threshold logging.
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Education & Pipeline</div>
+      <div class="education-item">
+        <div style="display:flex; justify-content:space-between; font-weight:600; color:#0f172a;">
+          <span>Bachelor of Engineering (B.E.) — Electrical & Electronics Engineering</span>
+          <span>India</span>
+        </div>
+        <div style="font-size:13px; color:#64748b; margin-top:2px;">
+          Transitioned engineering logic into software engineering, Java full-stack web applications, and database architectures.
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
