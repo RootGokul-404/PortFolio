@@ -232,7 +232,7 @@ function buildCronUser(userInfo: any) {
   return {
     id: -1,
     openId: userInfo.openId,
-    name: userInfo.name || "Manus Scheduled Task",
+    name: userInfo.name || "Scheduled Task",
     email: null,
     loginMethod: null,
     role: "user" as const,

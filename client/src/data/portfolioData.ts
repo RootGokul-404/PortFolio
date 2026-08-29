@@ -1,3 +1,6 @@
+// Portfolio Data Model and Default Content
+// Defines TypeScript interfaces and initial data for profile, projects, skills, and notes
+
 export interface Profile {
   displayName: string;
   handle: string;
@@ -72,6 +75,7 @@ export interface PortfolioData {
   submissions?: ContactSubmission[];
 }
 
+// Initial developer profile and projects data
 export const initialPortfolioData: PortfolioData = {
   profile: {
     displayName: "Gokulakannan",
@@ -103,7 +107,7 @@ export const initialPortfolioData: PortfolioData = {
     {
       id: 2,
       slug: "automated-parking",
-      title: "AI-Based Automated Parking",
+      title: "Automated Smart Parking System",
       summary: "An automation-focused parking system concept exploring intelligent vehicle flow, sensor detection, and optimized space allocation.",
       category: "Automation",
       techStack: ["Java", "Automation", "System Design", "SQL"],
@@ -188,24 +192,24 @@ export const initialPortfolioData: PortfolioData = {
     { id: 1, section: "identity", label: "Role", content: "Java Full Stack Developer", sortOrder: 1 },
     { id: 2, section: "identity", label: "Background", content: "Electrical & Electronics Engineering (EEE)", sortOrder: 2 },
     { id: 3, section: "identity", label: "Current Mission", content: "Building scalable applications and modern backend architectures", sortOrder: 3 },
-    { id: 4, section: "identity", label: "Focus Stack", content: "Spring Boot · REST APIs · DSA · AI-Driven Development", sortOrder: 4 },
+    { id: 4, section: "identity", label: "Focus Stack", content: "Java · Spring Boot · REST APIs · MySQL · DSA", sortOrder: 4 },
     { id: 5, section: "identity", label: "Philosophy", content: "Learn · Build · Evolve", sortOrder: 5 },
 
-    { id: 6, section: "journey", label: "01 / Hardware", content: "Electrical circuits and systems", sortOrder: 1 },
+    { id: 6, section: "journey", label: "01 / Hardware", content: "Electrical circuits and embedded hardware", sortOrder: 1 },
     { id: 7, section: "journey", label: "02 / Logic", content: "Problem solving and data structures", sortOrder: 2 },
-    { id: 8, section: "journey", label: "03 / Backend", content: "Java and Spring Boot", sortOrder: 3 },
-    { id: 9, section: "journey", label: "04 / Full Stack", content: "Modern web applications", sortOrder: 4 },
+    { id: 8, section: "journey", label: "03 / Backend", content: "Java, Spring Boot, and REST services", sortOrder: 3 },
+    { id: 9, section: "journey", label: "04 / Full Stack", content: "Modern web applications and database design", sortOrder: 4 },
 
-    { id: 10, section: "focus", label: "Spring Boot", content: "Building reliable Java application services", sortOrder: 1 },
-    { id: 11, section: "focus", label: "REST APIs", content: "Designing clean service boundaries", sortOrder: 2 },
+    { id: 10, section: "focus", label: "Spring Boot", content: "Building reliable Java backend services and REST APIs", sortOrder: 1 },
+    { id: 11, section: "focus", label: "REST APIs", content: "Designing clean endpoints and request/response contracts", sortOrder: 2 },
     { id: 12, section: "focus", label: "Backend Architecture", content: "Growing production-ready system design skills", sortOrder: 3 },
-    { id: 13, section: "focus", label: "Data Structures & Algorithms", content: "Strengthening problem solving fundamentals", sortOrder: 4 },
-    { id: 14, section: "focus", label: "Firebase Integration", content: "Exploring practical cloud-connected features", sortOrder: 5 },
-    { id: 15, section: "focus", label: "AI Assisted Development", content: "Using AI thoughtfully in the engineering workflow", sortOrder: 6 },
+    { id: 13, section: "focus", label: "Data Structures & Algorithms", content: "Strengthening problem solving fundamentals in Java", sortOrder: 4 },
+    { id: 14, section: "focus", label: "Database Design", content: "Writing optimized SQL queries and schema normalization", sortOrder: 5 },
+    { id: 15, section: "focus", label: "System Design", content: "Understanding modular architecture and clean code principles", sortOrder: 6 },
 
     { id: 16, section: "future", label: "Master Backend Engineering", content: "", sortOrder: 1 },
     { id: 17, section: "future", label: "Build Production-Level Systems", content: "", sortOrder: 2 },
-    { id: 18, section: "future", label: "Explore AI Integrated Development", content: "", sortOrder: 3 },
+    { id: 18, section: "future", label: "Explore Microservices Architecture", content: "", sortOrder: 3 },
     { id: 19, section: "future", label: "Improve System Design Skills", content: "", sortOrder: 4 },
     { id: 20, section: "future", label: "Create Scalable Architectures", content: "", sortOrder: 5 },
 
@@ -254,8 +258,9 @@ export const initialPortfolioData: PortfolioData = {
   ],
 };
 
-const STORAGE_KEY = "portfolio_data_v2";
+const STORAGE_KEY = "portfolio_data_v3";
 
+// Helper function to read portfolio data from localStorage with fallback
 export function getLocalPortfolioData(): PortfolioData {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
@@ -273,6 +278,7 @@ export function getLocalPortfolioData(): PortfolioData {
   return initialPortfolioData;
 }
 
+// Helper function to save portfolio data to localStorage
 export function saveLocalPortfolioData(data: PortfolioData): void {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
@@ -281,6 +287,7 @@ export function saveLocalPortfolioData(data: PortfolioData): void {
   }
 }
 
+// Save a new contact form submission to local state
 export function saveContactSubmission(submission: Omit<ContactSubmission, "id" | "createdAt" | "status">): ContactSubmission {
   const current = getLocalPortfolioData();
   const newSubmission: ContactSubmission = {

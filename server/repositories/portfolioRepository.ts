@@ -55,7 +55,7 @@ export interface IPortfolioRepository {
   deleteDetail(id: number): Promise<void>;
 }
 
-const siteKey = "marcus-chen-portfolio";
+const siteKey = "rootgokul-portfolio";
 
 const fallbackProfile: PortfolioProfile = {
   id: 1,
@@ -76,7 +76,7 @@ const fallbackProfile: PortfolioProfile = {
 
 const fallbackProjects: Project[] = [
   { id: 1, slug: "iot-integrated-farming", title: "IoT Integrated Farming", summary: "A connected farming system designed to bring sensor-informed decisions into agricultural operations with automated irrigation and soil moisture monitoring.", category: "IoT Systems", techStack: JSON.stringify(["ESP32", "Embedded C", "Sensors", "IoT"]), liveUrl: null, repoUrl: "https://github.com/RootGokul-404", featured: true, sortOrder: 1, createdAt: new Date(), updatedAt: new Date() },
-  { id: 2, slug: "automated-parking", title: "AI-Based Automated Parking", summary: "An automation-focused parking system concept exploring intelligent vehicle flow, sensor detection, and optimized space allocation.", category: "Automation", techStack: JSON.stringify(["Java", "Automation", "System Design", "SQL"]), liveUrl: null, repoUrl: "https://github.com/RootGokul-404", featured: true, sortOrder: 2, createdAt: new Date(), updatedAt: new Date() },
+  { id: 2, slug: "automated-parking", title: "Automated Smart Parking System", summary: "An automation-focused parking system concept exploring intelligent vehicle flow, sensor detection, and optimized space allocation.", category: "Automation", techStack: JSON.stringify(["Java", "Automation", "System Design", "SQL"]), liveUrl: null, repoUrl: "https://github.com/RootGokul-404", featured: true, sortOrder: 2, createdAt: new Date(), updatedAt: new Date() },
   { id: 3, slug: "taxi-booking-java", title: "Taxi Booking System", summary: "A Java-based booking application structured around core ride-request, driver assignment, and scheduling workflows.", category: "Application Development", techStack: JSON.stringify(["Java", "OOP", "SQL", "Data Structures"]), liveUrl: null, repoUrl: "https://github.com/RootGokul-404", featured: true, sortOrder: 3, createdAt: new Date(), updatedAt: new Date() },
   { id: 4, slug: "esp32-home-automation", title: "ESP32 Alarm Automation", summary: "An ESP32 and Blynk IoT mini project for lightweight alarm automation, motion sensing, buzzer triggers, and remote telemetry alerts.", category: "Embedded Systems", techStack: JSON.stringify(["ESP32", "Blynk IoT", "Embedded C", "Hardware Interfacing"]), liveUrl: null, repoUrl: "https://github.com/RootGokul-404", featured: false, sortOrder: 4, createdAt: new Date(), updatedAt: new Date() },
   { id: 5, slug: "java-atm-banking-system", title: "Java ATM & Banking Simulation", summary: "A modular Java banking simulation mini project featuring secure user authentication, PIN validation, deposit/withdrawal transactions, account balance auditing, and transaction logging.", category: "Application Development", techStack: JSON.stringify(["Java", "OOP Principles", "Exception Handling", "File I/O"]), liveUrl: null, repoUrl: "https://github.com/RootGokul-404", featured: false, sortOrder: 5, createdAt: new Date(), updatedAt: new Date() },

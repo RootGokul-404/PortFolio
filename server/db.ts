@@ -14,7 +14,8 @@ import { sendContactNotification } from "./contactEmail";
 import { ENV } from "./_core/env";
 import { portfolioRepository } from "./repositories/portfolioRepository";
 
-export const siteKey = "marcus-chen-portfolio";
+// Database connection and portfolio data operations
+export const siteKey = "rootgokul-portfolio";
 
 export async function getDb() {
   return (portfolioRepository as any).getDb?.() || null;

@@ -9,7 +9,7 @@ function contextFor(role: "admin" | "user"): TrpcContext {
       openId: `${role}-test`,
       name: "Test User",
       email: "test@example.com",
-      loginMethod: "manus",
+      loginMethod: "oauth",
       role,
       createdAt: new Date(),
       updatedAt: new Date(),
