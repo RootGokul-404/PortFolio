@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Project } from "@/data/portfolioData";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 
 interface ProjectsSectionProps {
   projects: Project[];
@@ -25,10 +25,10 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
               <span>// 02_SELECTED_WORK</span>
             </div>
             <h2 className="mt-1 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Featured Systems & Applications
+              Featured Systems & Projects
             </h2>
             <p className="mt-2 max-w-2xl text-slate-400">
-              Architected for clean boundaries, testability, and real-world system requirements.
+              Major engineering architectures and hands-on mini projects built for clean boundaries, testability, and real-world system requirements.
             </p>
           </div>
 
@@ -69,9 +69,16 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-0.5 font-mono text-[11px] uppercase tracking-wider text-slate-400 group-hover:border-[#c7ff40]/30 group-hover:text-[#c7ff40]">
-                      {project.category}
-                    </span>
+                    <div className="flex items-center gap-2">
+                      <span className="rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-0.5 font-mono text-[11px] uppercase tracking-wider text-slate-400 group-hover:border-[#c7ff40]/30 group-hover:text-[#c7ff40]">
+                        {project.category}
+                      </span>
+                      {!project.featured && (
+                        <span className="rounded-sm border border-[#c7ff40]/30 bg-[#c7ff40]/10 px-2 py-0.5 font-mono text-[10px] font-semibold text-[#c7ff40]">
+                          MINI PROJECT
+                        </span>
+                      )}
+                    </div>
                     <span className="font-mono text-xs text-slate-600">
                       PROJECT_0{idx + 1}
                     </span>
@@ -99,17 +106,31 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
                       ))}
                     </div>
 
-                    {project.liveUrl && (
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-1.5 rounded-sm border border-cyan-400/40 bg-cyan-950/20 px-3 py-1 font-mono text-xs font-medium text-cyan-300 transition-colors hover:border-cyan-400 hover:text-cyan-200"
-                      >
-                        <ExternalLink className="h-3.5 w-3.5" />
-                        <span>LIVE PREVIEW</span>
-                      </a>
-                    )}
+                    <div className="flex items-center gap-2">
+                      {project.repoUrl && (
+                        <a
+                          href={project.repoUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-1.5 rounded-sm border border-white/10 bg-white/[0.03] px-3 py-1 font-mono text-xs text-slate-300 transition-colors hover:border-[#c7ff40]/40 hover:text-[#c7ff40]"
+                        >
+                          <Github className="h-3.5 w-3.5" />
+                          <span>GITHUB</span>
+                        </a>
+                      )}
+
+                      {project.liveUrl && (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-1.5 rounded-sm border border-cyan-400/40 bg-cyan-950/20 px-3 py-1 font-mono text-xs font-medium text-cyan-300 transition-colors hover:border-cyan-400 hover:text-cyan-200"
+                        >
+                          <ExternalLink className="h-3.5 w-3.5" />
+                          <span>LIVE PREVIEW</span>
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
