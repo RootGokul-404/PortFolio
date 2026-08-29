@@ -66,12 +66,21 @@ export function HeroSection({ profile, onOpenResume }: HeroSectionProps) {
                 <ArrowDownRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:translate-y-0.5" />
               </a>
 
-              <button
-                onClick={onOpenResume}
+              <a
+                href="/Gokulakannan-Resume.pdf"
+                download="Gokulakannan-Resume.pdf"
                 className="group flex items-center gap-2 rounded-sm border border-white/15 bg-white/[0.03] px-5 py-3 font-mono text-xs font-medium text-white transition-all hover:border-[#c7ff40]/50 hover:bg-white/[0.08]"
               >
                 <FileDown className="h-4 w-4 text-[#c7ff40]" />
-                <span>DOWNLOAD RÉSUMÉ</span>
+                <span>DOWNLOAD RÉSUMÉ (PDF)</span>
+              </a>
+
+              <button
+                onClick={onOpenResume}
+                className="rounded-sm border border-white/10 bg-white/[0.02] px-3.5 py-3 font-mono text-xs text-slate-300 hover:border-white/20 hover:text-white"
+                title="View Resume Specification"
+              >
+                <span>SPEC</span>
               </button>
 
               <div className="flex items-center gap-2 border-l border-white/10 pl-3">

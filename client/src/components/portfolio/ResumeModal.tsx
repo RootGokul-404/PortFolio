@@ -117,23 +117,26 @@ ${projectSection}
           </div>
 
           <div className="flex flex-wrap items-center gap-2">
-            <button
-              onClick={handlePrintResume}
-              className="flex items-center gap-1.5 rounded-sm border border-cyan-400/40 bg-cyan-950/20 px-3 py-1.5 font-mono text-xs font-semibold text-cyan-300 hover:border-cyan-400 hover:text-cyan-200"
-              title="Open print dialog to save as PDF"
-            >
-              <Printer className="h-3.5 w-3.5" />
-              <span>PRINT / PDF</span>
-            </button>
-
-            <button
-              onClick={handleDownloadHtml}
-              className="flex items-center gap-1.5 rounded-sm border border-[#c7ff40] bg-[#c7ff40] px-3 py-1.5 font-mono text-xs font-bold text-black hover:bg-[#d6ff66]"
-              title="Download HTML Resume"
+            <a
+              href="/Gokulakannan-Resume.pdf"
+              download="Gokulakannan-Resume.pdf"
+              className="flex items-center gap-1.5 rounded-sm border border-[#c7ff40] bg-[#c7ff40] px-3.5 py-1.5 font-mono text-xs font-bold text-black transition-colors hover:bg-[#d6ff66]"
+              title="Download PDF Resume"
             >
               <Download className="h-3.5 w-3.5" />
-              <span>DOWNLOAD RESUME</span>
-            </button>
+              <span>DOWNLOAD PDF</span>
+            </a>
+
+            <a
+              href="/Gokulakannan-Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 rounded-sm border border-cyan-400/40 bg-cyan-950/20 px-3 py-1.5 font-mono text-xs font-semibold text-cyan-300 transition-colors hover:border-cyan-400 hover:text-cyan-200"
+              title="View PDF Resume in new tab"
+            >
+              <FileText className="h-3.5 w-3.5" />
+              <span>VIEW PDF</span>
+            </a>
 
             <button
               onClick={handleDownloadMarkdown}
